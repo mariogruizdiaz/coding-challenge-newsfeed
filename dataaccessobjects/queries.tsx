@@ -98,7 +98,20 @@ export type AnnouncementsQueryData = {
     announcements: Announcement[];
 }
 
+
 export type AnnouncementsQueryVars = {
+    limit: number;
+    page: number;
+    fellowships: string[];
+    
+}
+
+export type GenericQueryData<T> = {
+    rows: T[];
+}
+
+
+export type GenericQueryVars = {
     limit: number;
     page: number;
     fellowships: string[];

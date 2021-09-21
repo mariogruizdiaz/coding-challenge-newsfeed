@@ -1,11 +1,12 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import Layout from 'components/Layout'
 import React, { CSSProperties, useState } from 'react'
 import Users from 'components/Users'
 import Announcements from 'components/Announcements'
 import ProfileViewPicker from 'components/ProfileViewPicker';
-import styled from 'styled-components'
+import { AnnouncementRow } from 'graphql/db'
+import AnnouncementCard from 'components/AnnouncementCard'
+import { Announcement } from 'dataaccessobjects/types'
 
 interface Map {
     [key: string]: string[]
@@ -33,6 +34,8 @@ export default function Home() {
             interestedOn: interestSettings[event]
         })
     }
+
+    const renderAnnouncement = (item: AnnouncementRow) => <AnnouncementCard announcement={item as Announcement}/>
 
     return (
         <Layout>

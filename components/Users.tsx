@@ -5,14 +5,6 @@ import React, { useEffect, useState, useRef, useCallback } from 'react';
 import styled, { CSSProperties } from 'styled-components';
 import UserCard from './UserCard';
 
-const divStyle: CSSProperties = {
-    color: 'blue',
-    textAlign: 'center',
-    padding: '5px 10px',
-    background: '#eee',
-    marginBottom: '15px',
-};
-
 
 const ScrollcontentStyle: CSSProperties = {
     height: '300px',
@@ -92,7 +84,7 @@ const Users = ({ fellowships, pageSize }: Props) => {
 
     return (
         <ContainerList>
-            <h2>Founders!</h2>
+            <h2>{fellowships.map(fellowship => `${fellowship.substring(0,1).toUpperCase()}${fellowship.substring(1)}`).join(' & ') !}</h2>
             <div style={ScrollcontentStyle}>
                 <div>
                     {
