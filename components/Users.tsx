@@ -84,14 +84,13 @@ const Users = ({ fellowships, pageSize }: Props) => {
 
     return (
         <ContainerList>
-            <h2>{fellowships.map(fellowship => `${fellowship.substring(0,1).toUpperCase()}${fellowship.substring(1)}`).join(' & ') !}</h2>
+            <h2>{fellowships.map(fellowship => `${fellowship.substring(0, 1).toUpperCase()}${fellowship.substring(1)}`).join(' & ')!}</h2>
             <div style={ScrollcontentStyle}>
                 <div>
                     {
                         list.map((user, index) => {
                             return (
                                 <DivCardContainer key={index}>
-                                    {/* <h2> {user.name} </h2> */}
                                     <UserCard user={user} />
                                 </DivCardContainer>
                             )

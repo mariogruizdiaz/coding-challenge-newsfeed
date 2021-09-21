@@ -42,7 +42,7 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
         serFilters(fellowships);
     }, [fellowships])
 
-    
+
 
     useEffect(() => {
         if (data?.announcements.length) {
@@ -57,10 +57,10 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
             }
         }
     }, [data])
-   
 
 
-    
+
+
 
     // here we handle what happens when user scrolls to Load More div
     // in this case we just update page variable
@@ -87,8 +87,8 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
         }
     }, [handleObserver]);
 
-    
-    
+
+
 
     return (
         <ContainerList>
@@ -101,7 +101,7 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
                                 <DivCardContainer key={index}>
                                     <AnnouncementCard announcement={announcement} />
                                 </DivCardContainer>)
-                            })
+                        })
                     }
                     <div ref={loader}>
                         <h3>
@@ -121,7 +121,6 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
         </ContainerList>
     )
 }
-
 
 const DivCardContainer = styled.div`
     color: 'blue',

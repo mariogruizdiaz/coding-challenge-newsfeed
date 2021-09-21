@@ -1,13 +1,13 @@
 import styled from 'styled-components'
 
-export default function Layout({children}: React.PropsWithChildren<{}>) {
-  return (
-    <Container>
-      <Main>
-        {children}
-      </Main>
-    </Container>
-  )
+export default function Layout({ children }: React.PropsWithChildren<{}>) {
+    return (
+        <Container>
+            <Main>
+                {children}
+            </Main>
+        </Container>
+    )
 }
 
 const Container = styled.div`

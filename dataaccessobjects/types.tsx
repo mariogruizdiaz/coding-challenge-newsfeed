@@ -1,18 +1,18 @@
 export type Project = {
-  id: number;
-  name: string;
-  description: string;
-  icon_url: string;
-  users: User[];
+    id: number;
+    name: string;
+    description: string;
+    icon_url: string;
+    users: User[];
 };
 
 export type User = {
-  id: number;
-  name: string;
-  bio: string;
-  fellowship: "fellows" | "angels" | "writers";
-  avatar_url: string;
-  projects: Project[];
+    id: number;
+    name: string;
+    bio: string;
+    fellowship: "fellows" | "angels" | "writers";
+    avatar_url: string;
+    projects: Project[];
 };
 
 export type Announcement = {
@@ -22,6 +22,6 @@ export type Announcement = {
     body: string;
     created_ts: Date;
     updated_ts: Date;
-  };
+};
 
 

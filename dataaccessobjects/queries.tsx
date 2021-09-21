@@ -77,7 +77,7 @@ export type UsersQueryVars = {
     limit: number;
     page: number;
     fellowships: string[];
-    
+
 }
 
 
@@ -103,7 +103,7 @@ export type AnnouncementsQueryVars = {
     limit: number;
     page: number;
     fellowships: string[];
-    
+
 }
 
 export type GenericQueryData<T> = {
@@ -115,6 +115,6 @@ export type GenericQueryVars = {
     limit: number;
     page: number;
     fellowships: string[];
-    
+
 }
 

@@ -10,7 +10,7 @@ import { Announcement } from 'dataaccessobjects/types'
 
 interface Map {
     [key: string]: string[]
-  }
+}
 
 const interestSettings: Map = {
     writers: ['writers'],
@@ -25,17 +25,17 @@ const newsContainer: CSSProperties = {
 }
 
 export default function Home() {
-    const [interestTarget, setInterestTarget] = useState({ profile: 'N/A', interestedOn: new Array()});
+    const [interestTarget, setInterestTarget] = useState({ profile: 'N/A', interestedOn: new Array() });
 
 
-    function handleViewChange(event: string){
+    function handleViewChange(event: string) {
         setInterestTarget({
             profile: event,
             interestedOn: interestSettings[event]
         })
     }
 
-    const renderAnnouncement = (item: AnnouncementRow) => <AnnouncementCard announcement={item as Announcement}/>
+    const renderAnnouncement = (item: AnnouncementRow) => <AnnouncementCard announcement={item as Announcement} />
 
     return (
         <Layout>
@@ -47,10 +47,10 @@ export default function Home() {
             <ProfileViewPicker onViewProfileChange={handleViewChange} />
             {
                 interestTarget && interestTarget.profile !== 'N/A'
-                && 
-                <div style={newsContainer}> 
+                &&
+                <div style={newsContainer}>
                     <Announcements fellowships={['all', interestTarget.profile]} pageSize={2} />
-                    <Users fellowships={interestTarget.interestedOn} pageSize={3}/>
+                    <Users fellowships={interestTarget.interestedOn} pageSize={3} />
                 </div>
             }
             {
