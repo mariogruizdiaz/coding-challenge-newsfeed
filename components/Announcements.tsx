@@ -114,9 +114,6 @@ const Announcements = ({ fellowships, pageSize }: Props) => {
                             {
                                 moreItemsInTheDB && `Load more items`
                             }
-                            {/* {
-                                !moreItemsInTheDB && `There are not more items to load`
-                            } */}
                         </h3>
                     </div>
                 </div>

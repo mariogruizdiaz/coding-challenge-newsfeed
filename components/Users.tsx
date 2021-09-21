@@ -7,8 +7,6 @@ import UserCard from './UserCard';
 
 const divStyle: CSSProperties = {
     color: 'blue',
-    // height: '150px',
-    // width: '400px',
     textAlign: 'center',
     padding: '5px 10px',
     background: '#eee',
@@ -118,9 +116,6 @@ const Users = ({ fellowships, pageSize }: Props) => {
                             {
                                 moreItemsInTheDB && `Load more items`
                             }
-                            {/* {
-                                !moreItemsInTheDB && `There are not more items to load`
-                            } */}
                         </h3>
                     </div>
                 </div>
